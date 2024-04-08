@@ -1,8 +1,22 @@
 @import-normalize;
+:root {
+	--main-color: #000000;
+	--secondary-color:#ffffff;
+	--third-color:#737BE1;
+	--main-bg-color:#ffffff;
+	--secondary-bg-color:#E9EAF9;
+	--footer-bg-color:#4F58C9;
+	--btn-bg-color:#737BE1;
+;
+}
 
 body {
- font-family: sans-serif;
- line-height: 1.5;
+font-family: Montserrat, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 1.4;
+background-color: var(--main-bg-color);
+color: var(--main-color);
 }
 
 h1,
@@ -12,17 +26,17 @@ h4,
 h5,
 h6,
 p {
- margin: 0;
+margin: 0;
 }
 
 ul,
 ol {
- margin: 0;
- padding: 0;
+margin: 0;
+padding: 0;
 }
 
 img {
- display: block;
- max-width: 100%;
- height: auto;
+display: block;
+max-width: 100%;
+height: auto;
 }
