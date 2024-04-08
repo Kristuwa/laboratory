@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/laboratory/static/css/main.d7fd84b4.css",
-    "main.js": "/laboratory/static/js/main.8ca58c8b.js",
+    "main.css": "/laboratory/static/css/main.cfb0afcc.css",
+    "main.js": "/laboratory/static/js/main.6979d642.js",
     "static/media/hero-bg-desk.webp": "/laboratory/static/media/hero-bg-desk.6e8a7281529a2a4474b4.webp",
     "static/media/gallery-01.webp": "/laboratory/static/media/gallery-01.775f473c36f7cc33209b.webp",
     "static/media/gallery-02.webp": "/laboratory/static/media/gallery-02.efb9b8bc228528b444fa.webp",
@@ -20,13 +20,14 @@
     "static/media/logo.svg": "/laboratory/static/media/logo.d6216bfd9abf761b49ad6253eea0a719.svg",
     "index.html": "/laboratory/index.html",
     "static/media/phone.svg": "/laboratory/static/media/phone.ebf9095d479d919af3488176e30468f4.svg",
+    "static/media/checkmark.svg": "/laboratory/static/media/checkmark.b7faf72ef7973f034464e1e44653831e.svg",
     "static/media/arrow.svg": "/laboratory/static/media/arrow.bf628e8efd8210d1c516987c91cca1ab.svg",
     "static/media/check.svg": "/laboratory/static/media/check.bc3ef419e06cfc3ca9bbc39708ad1365.svg",
-    "main.d7fd84b4.css.map": "/laboratory/static/css/main.d7fd84b4.css.map",
-    "main.8ca58c8b.js.map": "/laboratory/static/js/main.8ca58c8b.js.map"
+    "main.cfb0afcc.css.map": "/laboratory/static/css/main.cfb0afcc.css.map",
+    "main.6979d642.js.map": "/laboratory/static/js/main.6979d642.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7fd84b4.css",
-    "static/js/main.8ca58c8b.js"
+    "static/css/main.cfb0afcc.css",
+    "static/js/main.6979d642.js"
   ]
 }
