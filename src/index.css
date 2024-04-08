@@ -1,22 +1,38 @@
 @import-normalize;
+
 :root {
-	--main-color: #000000;
-	--secondary-color:#ffffff;
-	--third-color:#737BE1;
-	--main-bg-color:#ffffff;
-	--secondary-bg-color:#E9EAF9;
-	--footer-bg-color:#4F58C9;
-	--btn-bg-color:#737BE1;
-;
+  --main-color: #000000;
+  --secondary-color: #ffffff;
+  --third-color: #737be1;
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #e9eaf9;
+  --footer-bg-color: #4f58c9;
+  --btn-bg-color: #737be1;
+  --btn-hover: #5d63af;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-font-family: Montserrat, sans-serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 1.4;
-background-color: var(--main-bg-color);
-color: var(--main-color);
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 h1,
@@ -26,17 +42,74 @@ h4,
 h5,
 h6,
 p {
-margin: 0;
+  margin: 0;
 }
 
 ul,
 ol {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  transition: color 200ms linear;
 }
 
 img {
-display: block;
-max-width: 100%;
-height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+
+  transition: background-color 200ms linear;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--btn-hover);
+}
+
+a:hover,
+a:focus {
+  color: var(--btn-hover);
+}
+
+.container {
+  min-width: 320px;
+  padding: 0 18px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+@media screen and (min-width: 901px) {
+  .container {
+    padding: 0 20px;
+    min-width: 900px;
+    max-width: 1400px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 260px;
+    width: 1400px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.22;
 }

@@ -5,6 +5,7 @@ import Request from "./components/Request/Request";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import Modal from "./components/Modal/Modal";
+import Hero from "./components/Hero/Hero";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +13,7 @@ const App = () => {
     <>
       <Header />
       <main>
+        <Hero />
         <About />
         <Gallery />
         <Request setIsOpenModal={setIsOpen} />

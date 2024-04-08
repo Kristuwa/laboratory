@@ -1,39 +1,40 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import phone from "../../images/phone.svg";
-import "./Header.module.scss";
+import style from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="container">
-        <nav className="nav">
-          <NavLink className="headerLogo" to="/">
-            <img src={logo} alt="kapibaralab logo" />
-            Современные методики диагностики
+    <header className={style.header}>
+      <div className={`container ${style["header__container"]}`}>
+        <nav className={style.nav}>
+          <NavLink className={style["header-logo"]} to="/">
+            <img className={style["header-logo__img"]} src={logo} alt="kapibaralab logo" />
+            <span className={style["header-logo__text"]}>Современные методики диагностики</span>
           </NavLink>
-          <ul className="nav__list">
-            <li className="nav__item">
-              <NavLink className="nav__link" to="/aboutRef">
+          <ul className={style.nav__list}>
+            <li className={style.nav__item}>
+              <NavLink className={style.nav__link} to="/aboutRef">
                 Лаборатория
               </NavLink>
             </li>
-            <li className="nav__item">
-              <NavLink className="nav__link" to="/galleryRef">
+            <li className={style.nav__item}>
+              <NavLink className={style.nav__link} to="/galleryRef">
                 Галерея
               </NavLink>
             </li>
-            <li className="nav__item">
-              <NavLink className="nav__link" to="/requestRef">
+            <li className={style.nav__item}>
+              <NavLink className={style.nav__link} to="/requestRef">
                 Оставить заявку
               </NavLink>
             </li>
           </ul>
         </nav>
-        <a className="link-phone" href="tel:71234567890">
-          <img className="link-phone__img" src={phone} alt="laboratory" />
-          <span className="link-phone__number">+7 123 456 7890</span>
-          <span className="link-phone__text">Звонок бесплатный</span>
+        <a className={style["link-phone"]} href="tel:71234567890">
+          <img className={style["link-phone__img"]} src={phone} alt="laboratory" />
+          <span className={style["link-phone__container"]}>
+				<span className={style["link-phone__number"]}>+7 123 456 7890</span>
+          	<span className={style["link-phone__text"]}>Звонок бесплатный</span></span>
         </a>
       </div>
     </header>
