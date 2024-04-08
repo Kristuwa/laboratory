@@ -14,7 +14,7 @@ const App = () => {
       <main>
         <About />
         <Gallery />
-        <Request />
+        <Request setIsOpenModal={setIsOpen} />
       </main>
       <Footer />
       {isOpen && <Modal setIsOpen={setIsOpen} />}
