@@ -13,7 +13,7 @@ const Request = React.forwardRef(({ ...props }, requestRef) => {
           Доверьте свои медицинские исследования надежным капибарам-лаборантам и
           получите качественные результаты в кратчайшие сроки!
         </p>
-        <FormContainer setIsOpenModal={props} />
+        <FormContainer setIsOpenModal={props.setIsOpenModal} />
       </div>
     </section>
   );
