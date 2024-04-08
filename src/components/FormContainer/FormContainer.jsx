@@ -1,31 +1,31 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import checkmark from "../../images/checkmark.svg";
+import check from "../../images/check.svg";
+import style from "./FormContainer.module.scss";
 
 const FormSchema = Yup.object().shape({
   lastName: Yup.string()
     .min(2, "Too Short!")
     .max(70, "Too Long!")
-    .required("Required"),
+    .required("All inputs is required"),
   firstName: Yup.string()
     .min(2, "Too Short!")
     .max(70, "Too Long!")
-    .required("Required"),
+    .required("All inputs is required"),
   surname: Yup.string()
     .min(2, "Too Short!")
     .max(70, "Too Long!")
-    .required("Required"),
+    .required("All inputs is required"),
 });
 
-const FormContainer = ({setIsOpenModal}) => {
-
-  const handleSubmit = (values, {resetForm}) => {
-	console.log(values);
-	resetForm();
-	setIsOpenModal(true);
-	setTimeout(() => {
-		setIsOpenModal(false);
-	}, 2000);
+const FormContainer = ({ setIsOpenModal }) => {
+  const handleSubmit = (values, { resetForm }) => {
+    console.log(values);
+    resetForm();
+    setIsOpenModal(true);
+    setTimeout(() => {
+      setIsOpenModal(false);
+    }, 2000);
   };
 
   return (
@@ -39,16 +39,54 @@ const FormContainer = ({setIsOpenModal}) => {
       onSubmit={handleSubmit}
     >
       {({ errors, touched }) => (
-        <Form className="form">
-          <Field className="form__input" name="lastName" placeholder="Фамилия" />
-          <ErrorMessage className="form__error" name="lastName" />
-          <Field className="form__input" name="firstName" placeholder="Имя" />
-          <ErrorMessage className="form__error" name="firstName" />
-          <Field className="form__input" name="surname" placeholder="Отчество" />
-          <ErrorMessage className="form__error" name="surname" />
-          <button className="form__btn" type="submit">
+        <Form className={style["form"]}>
+          <div className={style["form-container"]}>
+            <Field
+              className={`${
+                errors.lastName
+                  ? style["form__input-error"]
+                  : style["form__input"]
+              }`}
+              name="lastName"
+              placeholder="Фамилия"
+            />
+            <ErrorMessage
+              component="div"
+              className={style["form__error"]}
+              name="lastName"
+            />
+            <Field
+              className={`${
+                errors.firstName
+                  ? style["form__input-error"]
+                  : style["form__input"]
+              }`}
+              name="firstName"
+              placeholder="Имя"
+            />
+            <ErrorMessage
+              component="div"
+              className={style["form__error"]}
+              name="firstName"
+            />
+            <Field
+              className={`${
+                errors.surname
+                  ? style["form__input-error"]
+                  : style["form__input"]
+              }`}
+              name="surname"
+              placeholder="Отчество"
+            />
+            <ErrorMessage
+              component="div"
+              className={style["form__error"]}
+              name="surname"
+            />
+          </div>
+          <button className={style["form__btn"]} type="submit">
             Отправить
-            <img className="form__img" src={checkmark} alt="checkmark" />
+            <img className={style["form__img"]} src={check} alt="check" />
           </button>
         </Form>
       )}

@@ -11,42 +11,43 @@ import galleryImgMobTwo from "../../images/gallery-mob-02.webp";
 import galleryImgMobThree from "../../images/gallery-mob-03.webp";
 import galleryImgMobFour from "../../images/gallery-mob-04.webp";
 import { useMediaQuery } from "react-responsive";
+import style from "./Gallery.module.scss";
 
 const Gallery = React.forwardRef(({ ...props }, galleryRef) => {
   const isMobile = useMediaQuery({
-    query: "(max-width: 900px)",
+    query: "(max-width: 899px)",
   });
 
   return (
-    <section className="gallery" ref={galleryRef}>
+    <section className={style["gallery"]} ref={galleryRef}>
       <div className="container">
-        <h2 className="gallery__title title">Галерея</h2>
+        <h2 className={`${style["gallery__title"]} title`}>Галерея</h2>
         {isMobile && (
-          <ul className="gallery__list">
-            <li className="gallery__item">
+          <ul className={style["gallery__list"]}>
+            <li className={style["gallery__item"]}>
               <img
-                className="gallery__img"
+                className={style["gallery__img"]}
                 src={galleryImgMobOne}
                 alt="laboratory"
               />
             </li>
-            <li className="gallery__item">
+            <li className={style["gallery__item"]}>
               <img
-                className="gallery__img"
+                className={style["gallery__img"]}
                 src={galleryImgMobTwo}
                 alt="laboratory"
               />
             </li>
-            <li className="gallery__item">
+            <li className={style["gallery__item"]}>
               <img
-                className="gallery__img"
+                className={style["gallery__img"]}
                 src={galleryImgMobThree}
                 alt="laboratory"
               />
             </li>
-            <li className="gallery__item">
+            <li className={style["gallery__item"]}>
               <img
-                className="gallery__img"
+                className={style["gallery__img"]}
                 src={galleryImgMobFour}
                 alt="laboratory"
               />
@@ -55,45 +56,45 @@ const Gallery = React.forwardRef(({ ...props }, galleryRef) => {
         )}
         {!isMobile && (
           <>
-            <div className="container-top">
+            <div className={style["container-top"]}>
               <img
-                className="container-top__one"
+                className={style["container-top__one"]}
                 src={galleryImgOne}
                 alt="laboratory"
               />
-              <div className="container-top__right">
+              <div className={style["container-top__right"]}>
                 <img
-                  className="container-top__two"
+                  className={style["container-top__two"]}
                   src={galleryImgTwo}
                   alt="laboratory"
                 />
-                <div className="container-top__bottom">
+                <div className={style["container-top__bottom"]}>
                   <img
-                    className="container-top__three"
+                    className={style["container-top__three"]}
                     src={galleryImgThree}
                     alt="laboratory"
                   />
                   <img
-                    className="container-top__four"
+                    className={style["container-top__four"]}
                     src={galleryImgFour}
                     alt="laboratory"
                   />
                 </div>
               </div>
             </div>
-            <div className="container-bottom">
+            <div className={style["container-bottom"]}>
               <img
-                className="container-bottom__one"
+                className={style["container-bottom__one"]}
                 src={galleryImgFive}
                 alt="laboratory"
               />
               <img
-                className="container-bottom__two"
+                className={style["container-bottom__two"]}
                 src={galleryImgSix}
                 alt="laboratory"
               />
               <img
-                className="container-bottom__three"
+                className={style["container-bottom__three"]}
                 src={galleryImgSeven}
                 alt="laboratory"
               />

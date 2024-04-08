@@ -4,6 +4,12 @@ The website page is a laboratory website. Here you can find all the necessary in
 
 This App [link](https://kristuwa.github.io/laboratory/).
 
+# To run the application
+
+- Clone this repository;
+- Run command "npm install"
+- Run command "npm run start"
+
 # Technologies
 
 - React,
