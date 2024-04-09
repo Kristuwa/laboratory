@@ -6,7 +6,9 @@
   padding-top: 198px;
   padding-bottom: 30px;
   width: 100%;
-
+  @media screen and (min-width: 800px) {
+	background-position: top 0 right 0;
+ }
   @media screen and (min-width: 900px) {
     background-size: 100% auto;
     background-position: top 0 right 0;
