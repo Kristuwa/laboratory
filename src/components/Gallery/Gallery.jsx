@@ -13,13 +13,13 @@ import galleryImgMobFour from "../../images/gallery-mob-04.webp";
 import { useMediaQuery } from "react-responsive";
 import style from "./Gallery.module.scss";
 
-const Gallery = React.forwardRef(({ ...props }, galleryRef) => {
+const Gallery = React.forwardRef(({ ...props }, forwardedRef) => {
   const isMobile = useMediaQuery({
     query: "(max-width: 899px)",
   });
 
   return (
-    <section className={style["gallery"]} ref={galleryRef}>
+    <section className={style["gallery"]} ref={forwardedRef}>
       <div className="container">
         <h2 className={`${style["gallery__title"]} title`}>Галерея</h2>
         {isMobile && (

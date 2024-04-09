@@ -4,9 +4,9 @@ import arrow from "../../images/arrow.svg";
 import image from "../../images/about-bg.webp";
 import style from "./Aboute.module.scss";
 
-const About = React.forwardRef(({ ...props }, aboutRef) => {
+const About = React.forwardRef(({ ...props }, forwardedRef) => {
   return (
-    <section className={style["about"]} ref={aboutRef}>
+    <section className={style["about"]} ref={forwardedRef}>
       <div className={`${style["about__container"]} container`}>
         <h2 className={`${style["about__title"]} title`}>Лаборатория</h2>
         <img className={style["about__img"]} src={image} alt="arrow" />

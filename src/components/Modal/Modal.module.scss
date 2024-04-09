@@ -16,6 +16,7 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100%;
+  border-radius: 8px;
   height: 607px;
   width: 100%;
   min-width: 320px;
@@ -25,15 +26,15 @@
   align-items: center;
   flex-direction: column;
   gap: 24px;
-  @media screen and (min-width:900px) {
-	min-width: 850px;
-	max-width: 850px;
+  @media screen and (min-width: 900px) {
+    min-width: 850px;
+    max-width: 850px;
   }
-  @media screen and (min-width:1400px) {
-	height:453px;
-	min-width: 1400px;
-	max-width: 1400px;
-	flex-direction: row;
+  @media screen and (min-width: 1400px) {
+    height: 453px;
+    min-width: 1400px;
+    max-width: 1400px;
+    flex-direction: row;
   }
 }
 
@@ -48,7 +49,7 @@
   line-height: 1.4;
   text-align: center;
   color: var(--third-color);
-  @media screen and (min-width:1400px) {
-	font-size: 24px;
+  @media screen and (min-width: 1400px) {
+    font-size: 24px;
   }
 }

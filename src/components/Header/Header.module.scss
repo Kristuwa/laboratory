@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 96px;
   }
 
   .nav__link {
@@ -24,6 +23,18 @@
     line-height: 1.4;
     color: var(--main-color);
     cursor: pointer;
+  }
+  .nav__link--active {
+    padding: 8px 24px 8px 24px;
+    border-radius: 4px;
+    background-color: #e9eaf9;
+    color: #4f58c9;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    gap: 100px;
   }
 }
 

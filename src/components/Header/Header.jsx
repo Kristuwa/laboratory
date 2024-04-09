@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import phone from "../../images/phone.svg";
 import style from "./Header.module.scss";
 
 const Header = () => {
+	const params = useParams();
+	
   return (
     <header className={style.header}>
       <div className={`container ${style["header__container"]}`}>
@@ -14,17 +16,17 @@ const Header = () => {
           </NavLink>
           <ul className={style.nav__list}>
             <li className={style.nav__item}>
-              <NavLink className={style.nav__link} to="/aboutRef">
+              <NavLink className={`${params.block==="aboutRef" ? style["nav__link--active"] : style["nav__link"]}`} to="/aboutRef">
                 Лаборатория
               </NavLink>
             </li>
             <li className={style.nav__item}>
-              <NavLink className={style.nav__link} to="/galleryRef">
+              <NavLink className={`${params.block==="galleryRef" ? style["nav__link--active"] : style["nav__link"]}`} to="/galleryRef">
                 Галерея
               </NavLink>
             </li>
             <li className={style.nav__item}>
-              <NavLink className={style.nav__link} to="/requestRef">
+              <NavLink className={`${params.block==="requestRef" ? style["nav__link--active"] : style["nav__link"]}`} to="/requestRef">
                 Оставить заявку
               </NavLink>
             </li>
