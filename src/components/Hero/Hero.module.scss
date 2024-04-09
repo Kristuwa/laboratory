@@ -1,14 +1,15 @@
 .hero {
-  background-image: url("../../images/hero-bg-mob.webp");
-  background-position: top 0 left 0;
+  background-image: url("../../images/hero-bg-desk.webp");
+  background-position: top 0 right -100px;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 900px 243px;
   padding-top: 198px;
   padding-bottom: 30px;
   width: 100%;
 
   @media screen and (min-width: 900px) {
-    background-image: url("../../images/hero-bg-desk.webp");
+    background-size: 100% auto;
+    background-position: top 0 right 0;
     padding-top: 100px;
     padding-bottom: 96px;
   }
@@ -47,6 +48,7 @@
   @media screen and (min-width: 1400px) {
     width: 623px;
     height: 83px;
+    font-size: 48px;
   }
 }
 
@@ -72,6 +74,7 @@
 
   @media screen and (min-width: 1024px) {
     margin-bottom: 180px;
+    font-size: 48px;
   }
 
   @media screen and (min-width: 1400px) {
